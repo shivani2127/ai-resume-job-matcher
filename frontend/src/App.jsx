@@ -22,7 +22,7 @@ function App() {
       formData.append("resume", resume);
       formData.append("job_description", jobDesc);
   
-      const response = await fetch("http://127.0.0.1:8000/match", {
+      const response = await fetch("https://ai-resume-job-matcher-1-uuc0.onrender.com/match", {
         method: "POST",
         body: formData,
       });
