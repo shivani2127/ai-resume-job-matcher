@@ -1,12 +1,11 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-def calculate_match_score(resume_text, job_description):
-    documents = [resume_text, job_description]
+def calculate_match_score(resume_skills, job_skills):
+    if not job_skills:
+        return 0
 
-    vectorizer = TfidfVectorizer(stop_words="english")
-    vectors = vectorizer.fit_transform(documents)
+    matched_skills = set(resume_skills) & set(job_skills)
+    score = (len(matched_skills) / len(job_skills)) * 10
 
-    score = cosine_similarity(vectors[0], vectors[1])[0][0]
-
-    return round(score * 100, 2)
+    return round(score, 2)

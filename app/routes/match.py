@@ -17,9 +17,9 @@ async def match_resume(
 
     text = extract_text_from_pdf("temp.pdf")
 
-    score = calculate_match_score(text, job_description)
     resume_skills, job_skills, missing = get_missing_skills(text, job_description)
-    
+
+    score = calculate_match_score(resume_skills, job_skills)
     return {
     "match_score": score,
     "resume_skills": resume_skills,
