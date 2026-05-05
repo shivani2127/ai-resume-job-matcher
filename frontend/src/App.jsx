@@ -177,9 +177,7 @@ const styles = {
     fontWeight: "900",
     textAlign: "center",
     marginBottom: "10px",
-    color: "#0f172a",
-    letterSpacing: "-1px",
-    textShadow: "none"
+    color: "#0f172a"   // dark navy (best)
   },
   page: {
     minHeight: "100vh",
@@ -225,7 +223,7 @@ const styles = {
     fontSize: "17px",
     textAlign: "center",
     fontWeight: "500",
-    marginBottom: "28px"
+    marginBottom: "25px"
   },
   grid: {
     display: "grid",
