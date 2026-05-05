@@ -173,12 +173,13 @@ function App() {
 
 const styles = {
   heading: {
-    fontSize: "48px",
+    fontSize: "46px",
     fontWeight: "900",
     textAlign: "center",
     marginBottom: "10px",
-    color: "#ffffff",
-    textShadow: "0 0 20px rgba(0, 102, 255, 0.7)"
+    color: "#0f172a",
+    letterSpacing: "-1px",
+    textShadow: "none"
   },
   page: {
     minHeight: "100vh",
@@ -220,11 +221,11 @@ const styles = {
     fontWeight: "600"
   },
   subtitle: {
-    color: "#e2e8f0",
+    color: "#475569",
     fontSize: "17px",
     textAlign: "center",
     fontWeight: "500",
-    marginBottom: "25px"
+    marginBottom: "28px"
   },
   grid: {
     display: "grid",
