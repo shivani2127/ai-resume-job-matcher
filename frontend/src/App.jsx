@@ -55,25 +55,11 @@ function App() {
       <div style={styles.card}>
         <div style={styles.badge}>AI Powered Resume Intelligence</div>
 
-        <h1 style={{
-               fontSize: "46px",
-               fontWeight: "900",
-               textAlign: "center",
-               marginBottom: "10px",
-               background: "linear-gradient(90deg, #ffffff, #4facfe, #00f2fe)",
-                WebkitBackgroundClip: "text",
-               WebkitTextFillColor: "transparent",
-               textShadow: "0 5px 30px rgba(0,0,0,0.7)"
-}}>
+        <h1 style={styles.heading}>
   AI Resume Matcher
 </h1>
-        <p style={{
-           color: "#e2e8f0",
-          fontSize: "17px",
-            textAlign: "center",
-          fontWeight: "500",
-          marginBottom: "25px"
-}}>
+  
+<p style={styles.subtitle}>
   Upload your resume and get AI-powered match score, skill gaps, and recommendations.
 </p>
 
@@ -177,7 +163,9 @@ const styles = {
     fontWeight: "900",
     textAlign: "center",
     marginBottom: "10px",
-    color: "#0f172a"   // dark navy (best)
+    color: "#0f172a",
+    letterSpacing: "-1px",
+    textShadow: "none",
   },
   page: {
     minHeight: "100vh",
@@ -223,7 +211,7 @@ const styles = {
     fontSize: "17px",
     textAlign: "center",
     fontWeight: "500",
-    marginBottom: "25px"
+    marginBottom: "28px",
   },
   grid: {
     display: "grid",
