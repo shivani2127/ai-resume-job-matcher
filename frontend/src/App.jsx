@@ -155,6 +155,15 @@ function App() {
 }
 
 const styles = {
+  heading: {
+    fontSize: "42px",
+    fontWeight: "800",
+    textAlign: "center",
+    marginBottom: "10px",
+    background: "linear-gradient(90deg, #4facfe, #00f2fe)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent"
+  },
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #eef2ff, #f8fafc)",
@@ -195,9 +204,10 @@ const styles = {
     fontWeight: "600"
   },
   subtitle: {
-    color: "#64748b",
-    fontSize: "18px",
-    marginBottom: "35px",
+    color: "#cbd5e1",
+    fontSize: "16px",
+    textAlign: "center",
+    marginBottom: "20px"
   },
   grid: {
     display: "grid",
