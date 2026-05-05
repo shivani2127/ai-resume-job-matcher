@@ -5,3 +5,4 @@ pydantic
 PyMuPDF
 python-dotenv
 google-generativeai
+scikit-learn
