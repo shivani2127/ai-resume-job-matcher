@@ -55,10 +55,27 @@ function App() {
       <div style={styles.card}>
         <div style={styles.badge}>AI Powered Resume Intelligence</div>
 
-        <h1 style={styles.title}>AI Resume Matcher</h1>
-        <p style={styles.subtitle}>
-          Upload your resume and get AI-powered match score, skill gaps, and recommendations.
-        </p>
+        <h1 style={{
+               fontSize: "46px",
+               fontWeight: "900",
+               textAlign: "center",
+               marginBottom: "10px",
+               background: "linear-gradient(90deg, #ffffff, #4facfe, #00f2fe)",
+                WebkitBackgroundClip: "text",
+               WebkitTextFillColor: "transparent",
+               textShadow: "0 5px 30px rgba(0,0,0,0.7)"
+}}>
+  AI Resume Matcher
+</h1>
+        <p style={{
+           color: "#e2e8f0",
+          fontSize: "17px",
+            textAlign: "center",
+          fontWeight: "500",
+          marginBottom: "25px"
+}}>
+  Upload your resume and get AI-powered match score, skill gaps, and recommendations.
+</p>
 
         <div style={styles.grid}>
           <div style={styles.inputCard}>
@@ -156,13 +173,12 @@ function App() {
 
 const styles = {
   heading: {
-    fontSize: "42px",
-    fontWeight: "800",
+    fontSize: "48px",
+    fontWeight: "900",
     textAlign: "center",
     marginBottom: "10px",
-    background: "linear-gradient(90deg, #4facfe, #00f2fe)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent"
+    color: "#ffffff",
+    textShadow: "0 0 20px rgba(0, 102, 255, 0.7)"
   },
   page: {
     minHeight: "100vh",
@@ -204,10 +220,11 @@ const styles = {
     fontWeight: "600"
   },
   subtitle: {
-    color: "#cbd5e1",
-    fontSize: "16px",
+    color: "#e2e8f0",
+    fontSize: "17px",
     textAlign: "center",
-    marginBottom: "20px"
+    fontWeight: "500",
+    marginBottom: "25px"
   },
   grid: {
     display: "grid",
