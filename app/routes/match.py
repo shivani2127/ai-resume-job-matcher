@@ -2,6 +2,7 @@ from fastapi import APIRouter, UploadFile, File, Form
 from app.services.matcher_service import calculate_match_score
 from app.services.skill_service import get_missing_skills
 from app.utils.pdf_parser import extract_text_from_pdf
+from app.services.ai_service import get_ai_resume_analysis
 
 router = APIRouter()
 
@@ -20,9 +21,18 @@ async def match_resume(
     resume_skills, job_skills, missing = get_missing_skills(text, job_description)
 
     score = calculate_match_score(resume_skills, job_skills)
+    try:
+       ai_result = get_ai_resume_analysis(text, job_description)
+    except Exception as e:
+       ai_result = {
+        "ai_summary": "AI analysis temporarily unavailable due to API quota. Skill matching still works.",
+        "ai_recommendations": []
+    }
     return {
     "match_score": score,
     "resume_skills": resume_skills,
     "job_skills": job_skills,
-    "missing_skills": missing
+    "missing_skills": missing,
+    "ai_summary": ai_result.get("ai_summary"),
+    "ai_recommendations": ai_result.get("ai_recommendations"),
 }

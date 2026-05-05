@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.match import router as match_router
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI(
     title="AI Resume Job Matcher",
