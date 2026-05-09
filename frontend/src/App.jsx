@@ -131,12 +131,13 @@ function App() {
 </div>
             </div>
 
-            {result.ai_summary && (
-              <div style={styles.aiBox}>
+            {result.ai_summary &&
+               !result.ai_summary.includes("currently unavailable") && (
+               <div style={styles.aiBox}>
                 <h3 style={styles.aiTitle}>🤖 AI Summary</h3>
-                <p style={styles.aiText}>{result.ai_summary}</p>
-              </div>
-            )}
+                 <p style={styles.aiText}>{result.ai_summary}</p>
+               </div>
+)}
 
             {result.ai_recommendations?.length > 0 && (
               <div style={styles.aiBox}>

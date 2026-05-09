@@ -25,8 +25,8 @@ async def match_resume(
        ai_result = get_ai_resume_analysis(text, job_description)
     except Exception as e:
        ai_result = {
-        "ai_summary": "AI analysis temporarily unavailable due to API quota. Skill matching still works.",
-        "ai_recommendations": []
+    "ai_summary": "AI recommendations are currently unavailable. Core resume matching is still active.",
+    "ai_recommendations": []
     }
     return {
     "match_score": score,
